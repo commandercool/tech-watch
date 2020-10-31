@@ -1,6 +1,6 @@
 <template>
     <div>
-        <TopBarMobile/>
+        <Header/>
         <b-row id="main">
             <MobileTopBar/>
             <MasterSearchResults/>
@@ -13,14 +13,14 @@
 import MobileTopBar from '../components/MobileTopBar.vue'
 import MasterSearchResults from '../components/MasterSearchResults.vue'
 import MobileBottomBar from '../components/MobileBottomBar.vue'
-import TopBarMobile from '../components/TopBarMobile.vue'
+import Header from '../components/Header.vue'
 
 export default {
   components: {
       MobileTopBar,
       MasterSearchResults,
       MobileBottomBar,
-      TopBarMobile
+      Header
   }
 }
 </script>

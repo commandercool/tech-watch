@@ -26,10 +26,12 @@
         <b-row style="margin-top: 10px">
             <b-col sm>
                 <b-button variant="primary">
-                    <b-icon-telephone-fill></b-icon-telephone-fill>Позвонить
+                    <b-icon-telephone-fill></b-icon-telephone-fill>
+                    Позвонить
                 </b-button>
                 <b-button variant="primary" style="margin-left: 6px">
-                    <b-icon-chat-text-fill></b-icon-chat-text-fill>Написать
+                    <b-icon-chat-text-fill></b-icon-chat-text-fill>
+                    Написать
                 </b-button>
             </b-col>
         </b-row>

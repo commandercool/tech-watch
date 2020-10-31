@@ -1,10 +1,12 @@
 <template>
     <b-col sm id="mobile-menu" class="d-sm-block d-md-none sticky-top">
         <b-button pill variant="outline-primary">
-            <b-icon-map></b-icon-map>На карте
+            <b-icon-map></b-icon-map>
+            На карте
         </b-button>
         <b-button pill variant="outline-primary" style="margin-left: 5px">
-            <b-icon-filter-circle></b-icon-filter-circle>Фильтры
+            <b-icon-filter-circle></b-icon-filter-circle>
+            Фильтры
         </b-button>
         <b-button pill variant="outline-primary" style="margin-left: 5px">
             <b-icon-three-dots></b-icon-three-dots>

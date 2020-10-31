@@ -1,6 +1,6 @@
 <template>
     <div>
-        <TopBarMobile />
+        <Header />
         <b-row id="main">
             <GoBackTopBar />
             <MasterCardFull />
@@ -11,14 +11,14 @@
 
 <script>
 import MasterCardFull from "../components/MasterCardFull.vue";
-import TopBarMobile from "../components/TopBarMobile.vue";
+import Header from "../components/Header.vue";
 import GoBackTopBar from "../components/GoBackTopBar.vue";
 import MasterReview from "../components/MasterReview";
 
 export default {
     components: {
         MasterCardFull,
-        TopBarMobile,
+        Header,
         GoBackTopBar,
         MasterReview,
     },
