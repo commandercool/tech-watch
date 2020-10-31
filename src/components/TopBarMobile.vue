@@ -1,8 +1,6 @@
 <template>
     <b-row class="top-bar">
-        <b-col style="padding: 10px">
-            Tech-Watch
-        </b-col>
+        <b-col style="padding: 10px">Tech-Watch</b-col>
     </b-row>
 </template>
 
