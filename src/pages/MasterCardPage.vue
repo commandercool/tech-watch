@@ -1,5 +1,23 @@
 <template>
-    <div>
-        
-    </div>
+  <div>
+    <TopBarMobile />
+    <b-row id="main">
+      <GoBackTopBar />
+      <MasterCardFull />
+    </b-row>
+  </div>
 </template>
+
+<script>
+import MasterCardFull from "../components/MasterCardFull.vue";
+import TopBarMobile from "../components/TopBarMobile.vue";
+import GoBackTopBar from "../components/GoBackTopBar.vue";
+
+export default {
+  components: {
+    MasterCardFull,
+    TopBarMobile,
+    GoBackTopBar,
+  },
+};
+</script>
