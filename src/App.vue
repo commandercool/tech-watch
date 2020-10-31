@@ -1,28 +1,27 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <b-container fluid class id="app">
+    <TopBarMobile/>
+    <b-row id="main">
+      <MobileTopBar/>
+      <MasterSearchResults/>
+    </b-row>
+    <MobileBottomBar/>
+  </b-container>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MobileTopBar from './components/MobileTopBar.vue'
+import MasterSearchResults from './components/MasterSearchResults.vue'
+import MobileBottomBar from './components/MobileBottomBar.vue'
+import TopBarMobile from './components/TopBarMobile.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    MobileTopBar,
+    MasterSearchResults,
+    MobileBottomBar,
+    TopBarMobile
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
