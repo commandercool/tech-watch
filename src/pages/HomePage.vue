@@ -19,19 +19,22 @@
                 <h1>
                     <b-icon-search class="rounded-circle bg-danger p-2" variant="light"></b-icon-search>
                 </h1>
-                <h3>Находи мастера рядом с домом</h3>
+                <h3>Находите</h3>
+                <p>Опытные компьютерные мастера в пешей доступности от вас</p>
             </b-col>
             <b-col sm style="margin-top: 2rem">
                 <h1>
                     <b-icon-telephone class="rounded-circle bg-danger p-2" variant="light"></b-icon-telephone>
                 </h1>
-                <h3>Договаривайся на удобное время</h3>
+                <h3>Договаривайтесь</h3>
+                <p>Позвоните или напишите мастеру, чтобы договориться на удобное для вас время</p>
             </b-col>
             <b-col sm style="margin-top: 2rem">
                 <h1>
                     <b-icon-laptop class="rounded-circle bg-danger p-2" variant="light"></b-icon-laptop>
                 </h1>
-                <h3>Чини технику!</h3>
+                <h3>Чините!</h3>
+                <p>Получайте качественный ремонт вашей техники по низкой цене</p>
             </b-col>
         </b-row>
     </div>
@@ -82,5 +85,9 @@ export default {
 }
 h3 {
     color: var(--secondary);
+}
+p {
+    color: var(--secondary);
+    font-size: 1.2rem;
 }
 </style>

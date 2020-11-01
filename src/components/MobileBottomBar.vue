@@ -16,9 +16,11 @@
             </b-button>
         </b-col>
         <b-col style="padding: 0">
-            <b-button variant="info" class="mobile-bottom-button">
-                <b-icon-house></b-icon-house>
-            </b-button>
+            <router-link to="/">
+                <b-button variant="info" class="mobile-bottom-button">
+                    <b-icon-house></b-icon-house>
+                </b-button>
+            </router-link>
         </b-col>
     </b-row>
 </template>]
