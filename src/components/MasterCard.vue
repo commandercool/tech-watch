@@ -4,12 +4,12 @@
     <router-link to="/master">
       <b-row>
         <b-col sm md="4">
-          <b-avatar style="width: 100%; height: auto" square variant="primary">
+          <b-avatar style="width: 100%; height: auto" square variant="info">
           </b-avatar>
           <b-form-rating
             style="padding: 0"
             :value="master.rating"
-            variant="primary"
+            variant="warning"
             no-border="true"
             readonly
           >

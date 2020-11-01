@@ -1,22 +1,22 @@
 <template>
     <b-row class="mobile-bottom d-sm-block d-md-none">
         <b-col style="padding: 0">
-            <b-button variant="primary" class="mobile-bottom-button">
+            <b-button variant="info" class="mobile-bottom-button">
                 <b-icon-search></b-icon-search>
             </b-button>
         </b-col>
         <b-col style="padding: 0">
-            <b-button variant="primary" class="mobile-bottom-button">
+            <b-button variant="info" class="mobile-bottom-button">
                 <b-icon-file-earmark-text></b-icon-file-earmark-text>
             </b-button>
         </b-col>
         <b-col style="padding: 0">
-            <b-button variant="primary" class="mobile-bottom-button">
+            <b-button variant="info" class="mobile-bottom-button">
                 <b-icon-envelope></b-icon-envelope>
             </b-button>
         </b-col>
         <b-col style="padding: 0">
-            <b-button variant="primary" class="mobile-bottom-button">
+            <b-button variant="info" class="mobile-bottom-button">
                 <b-icon-house></b-icon-house>
             </b-button>
         </b-col>
