@@ -1,11 +1,9 @@
 <template>
     <div>
         <Header />
-        <b-row id="main">
-            <GoBackTopBar />
-            <MasterCardFull />
-            <MasterReview />
-        </b-row>
+        <GoBackTopBar />
+        <MasterCardFull />
+        <MasterReview />
     </div>
 </template>
 

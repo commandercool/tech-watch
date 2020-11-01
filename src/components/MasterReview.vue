@@ -1,5 +1,10 @@
 <template>
-    <div class="master-card">Отзывы</div>
+    <div class="master-card">
+        Отзывы (100500)
+        <div class="master-card">
+            фывфывфвф
+        </div>
+    </div>
 </template>
 
 <style scoped>
@@ -21,6 +26,5 @@
     padding-top: 10px;
     padding-bottom: 10px;
     padding: 10px;
-    margin: 10px;
 }
 </style>

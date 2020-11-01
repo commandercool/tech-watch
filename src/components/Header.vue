@@ -7,8 +7,8 @@
 <style scoped>
 .top-bar {
     height: 48px;
-    background-color: var(--primary);
-    color: whitesmoke;
+    background-color: white;
+    color: var(--primary);
     font-weight: bold;
 }
 </style>

@@ -1,9 +1,11 @@
 <template>
-    <b-col sm id="mobile-back-bar" class="d-sm-block d-md-none sticky-top" @click="$router.go(-1)">
-        <p class="h2 mb-2">
-            <b-icon-caret-left-fill variant="primary"></b-icon-caret-left-fill>
-        </p>
-    </b-col>
+    <b-row class="d-sm-block d-md-none sticky-top">
+        <b-col sm id="mobile-back-bar" @click="$router.go(-1)">
+            <p class="h2 mb-2">
+                <b-icon-caret-left-fill variant="primary"></b-icon-caret-left-fill>
+            </p>
+        </b-col>
+    </b-row>
 </template>
 
 <style scoped>
