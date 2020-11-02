@@ -10,6 +10,7 @@ import MasterCard from "./MasterCard.vue";
 export default {
     data: function () {
         return {
+            filtersHidden: true,
             masterList: [
                 {
                     name: "Чувак Чуваков",

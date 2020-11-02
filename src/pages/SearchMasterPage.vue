@@ -6,7 +6,6 @@
             <MasterSearchResults/>
         </b-row>
         <MobileBottomBar/>
-        <SearchFilters />
     </div>
 </template>
 
@@ -15,7 +14,6 @@ import MobileTopBar from '../components/MobileTopBar.vue'
 import MasterSearchResults from '../components/MasterSearchResults.vue'
 import MobileBottomBar from '../components/MobileBottomBar.vue'
 import Header from '../components/Header.vue'
-import SearchFilters from '../components/SearchFilters.vue'
 
 export default {
   components: {
@@ -23,7 +21,6 @@ export default {
       MasterSearchResults,
       MobileBottomBar,
       Header,
-      SearchFilters
   }
 }
 </script>
