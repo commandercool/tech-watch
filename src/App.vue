@@ -4,6 +4,12 @@
   </b-container>
 </template>
 
+<style>
+p {
+  color: var(--secondary)
+}
+</style>
+
 <script>
 export default {
   name: 'App',

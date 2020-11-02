@@ -37,15 +37,18 @@
                 <p>Получайте качественный ремонт вашей техники по низкой цене</p>
             </b-col>
         </b-row>
+        <Footer />
     </div>
 </template>
 
 <script>
 import Header from "../components/Header.vue";
+import Footer from '../components/Footer.vue'
 
 export default {
     components: {
         Header,
+        Footer
     },
 };
 </script>

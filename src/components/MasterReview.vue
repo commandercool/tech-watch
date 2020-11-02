@@ -1,13 +1,32 @@
 <template>
     <div class="master-card">
         Отзывы (100500)
-        <div class="master-card">
-            фывфывфвф
+        <div class="master-card negative-review">
+            <b-row>
+                <b-col lg>Чайник</b-col>
+                <b-col cols="3">
+                    <b-avatar style="width: 100%; height: auto" square variant="info"></b-avatar>
+                </b-col>
+                <b-col cols="9">
+                    <b-form-rating
+                        style="padding: 0"
+                        value="2"
+                        variant="warning"
+                        no-border="true"
+                        readonly
+                    ></b-form-rating>
+                    <p class="comment">Все починил, но не очень хорошо</p>
+                </b-col>
+            </b-row>
         </div>
     </div>
 </template>
 
 <style scoped>
+.comment {
+    line-height: 0.9rem;
+    font-weight: 0.9rem;
+}
 .master-name {
     font-size: 1.4rem;
     font-weight: bolder;
@@ -26,5 +45,8 @@
     padding-top: 10px;
     padding-bottom: 10px;
     padding: 10px;
+}
+.negative-review {
+    border-color: var(--danger);
 }
 </style>
