@@ -13,23 +13,31 @@
                             <b-form-input v-model="filter.range" type="range" min="1" max="15"></b-form-input>
                             <div class="mt-2">{{ filter.range }} км</div>
                         </b-form-group>
+                        <b-form-group label="Рейтинг выше или равен:">
+                            <b-form-rating
+                                style="padding: 0"
+                                value="3"
+                                variant="warning"
+                                no-border="true"
+                            ></b-form-rating>
+                        </b-form-group>
                     </b-form>
                 </b-col>
             </b-row>
         </div>
-        <b-button pill variant="outline-info">
-            <b-icon-map></b-icon-map>На карте
+        <b-dropdown variant="outline-info">
+            <template slot="button-content">
+                <b-icon-sort-down-alt></b-icon-sort-down-alt>Сортировать
+            </template>
+            <b-dropdown-item>По расстоянию</b-dropdown-item>
+            <b-dropdown-item>По рейтингу</b-dropdown-item>
+            <b-dropdown-item>По расстоянию и рейтингу</b-dropdown-item>
+        </b-dropdown>
+        <b-button variant="outline-info" style="margin-left: 4px" @click="filtersDisplayed = true">
+            <b-icon-filter-circle></b-icon-filter-circle>
         </b-button>
-        <b-button
-            pill
-            variant="outline-info"
-            style="margin-left: 5px"
-            @click="filtersDisplayed = true"
-        >
-            <b-icon-filter-circle></b-icon-filter-circle>Фильтры
-        </b-button>
-        <b-button pill variant="outline-info" style="margin-left: 5px">
-            <b-icon-three-dots></b-icon-three-dots>
+        <b-button variant="outline-info" style="margin-left: 4px">
+            <b-icon-geo-alt></b-icon-geo-alt>
         </b-button>
     </b-col>
 </template>
@@ -40,8 +48,8 @@ export default {
         return {
             filtersDisplayed: false,
             filter: {
-                range: '1'
-            }
+                range: "1",
+            },
         };
     },
 };
@@ -49,7 +57,7 @@ export default {
 
 <style scoped>
 #filter-form {
-    color: var(--secondary)
+    color: var(--secondary);
 }
 #mobile-menu {
     background-color: white;
@@ -65,5 +73,6 @@ export default {
     height: 100%;
     background-color: white;
     padding: 16px;
+    z-index: 9999;
 }
 </style>
