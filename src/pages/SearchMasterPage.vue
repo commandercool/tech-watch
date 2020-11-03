@@ -2,6 +2,7 @@
     <div>
         <Header/>
         <b-row id="main">
+            <DesktopNavigation />
             <MobileTopBar/>
             <MasterSearchResults/>
         </b-row>
@@ -14,6 +15,7 @@ import MobileTopBar from '../components/MobileTopBar.vue'
 import MasterSearchResults from '../components/MasterSearchResults.vue'
 import MobileBottomBar from '../components/MobileBottomBar.vue'
 import Header from '../components/Header.vue'
+import DesktopNavigation from '../components/DesktopNavigation.vue'
 
 export default {
   components: {
@@ -21,6 +23,7 @@ export default {
       MasterSearchResults,
       MobileBottomBar,
       Header,
+      DesktopNavigation
   }
 }
 </script>

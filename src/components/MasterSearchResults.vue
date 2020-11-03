@@ -1,5 +1,5 @@
 <template>
-    <b-col md="9" style="padding: 10px; margin-bottom: 48px">
+    <b-col md="6" style="margin-bottom: 48px">
         <MasterCard :master="master" v-for="master in masterListFiltered" :key="master.name" />
     </b-col>
 </template>
@@ -35,9 +35,9 @@ export default {
                     rating: "4.5",
                     description:
                         "Переустанавливаю операционные системы, имею большой опыт с Windows и Linux.",
-                }
+                },
             ],
-            masterListFiltered: ""
+            masterListFiltered: "",
         };
     },
     components: {
@@ -45,8 +45,10 @@ export default {
     },
     methods: {
         search(filter) {
-            this.masterListFiltered = this.masterList.filter(master => master.rating >= filter.rating);
-        }
+            this.masterListFiltered = this.masterList.filter(
+                (master) => master.rating >= filter.rating
+            );
+        },
     },
     mounted() {
         this.masterListFiltered = this.masterList;
