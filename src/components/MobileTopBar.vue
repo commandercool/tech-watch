@@ -30,9 +30,10 @@
             <template slot="button-content">
                 <b-icon-sort-down-alt></b-icon-sort-down-alt>Сортировать
             </template>
-            <b-dropdown-item>По расстоянию</b-dropdown-item>
-            <b-dropdown-item>По рейтингу</b-dropdown-item>
-            <b-dropdown-item>По расстоянию и рейтингу</b-dropdown-item>
+            <b-dropdown-item @click="sortPop()" :active="sort.pop">По популярности</b-dropdown-item>
+            <b-dropdown-item @click="sortDistance()" :active="sort.distance">По расстоянию</b-dropdown-item>
+            <b-dropdown-item @click="sortRating()" :active="sort.rating">По рейтингу</b-dropdown-item>
+            <b-dropdown-item @click="sortDisrat()" :active="sort.disrat">По расстоянию и рейтингу</b-dropdown-item>
         </b-dropdown>
         <b-button variant="outline-info" style="margin-left: 4px" @click="filtersDisplayed = true">
             <b-icon-filter-circle></b-icon-filter-circle>
@@ -52,6 +53,12 @@ export default {
                 range: "5",
                 rating: "3",
             },
+            sort: {
+                pop: true,
+                distance: false,
+                rating: false,
+                disrat: false
+            }
         };
     },
     methods: {
@@ -60,6 +67,33 @@ export default {
             this.$vueEventBus.$emit("filter-updated", this.filter);
             this.filtersDisplayed = false;
         },
+        sortPop() {
+            this.sort.pop = true;
+            this.sort.distance = false;
+            this.sort.rating = false;
+            this.sort.disrat = false;
+            this.$vueEventBus.$emit("sort-pop", this.filter);
+        },
+        sortDistance() {
+            this.sort.pop = false;
+            this.sort.distance = true;
+            this.sort.rating = false;
+            this.sort.disrat = false;
+            this.$vueEventBus.$emit("sort-distance", this.filter);
+        },
+        sortRating() {
+            this.sort.pop = false;
+            this.sort.distance = false;
+            this.sort.rating = true;
+            this.sort.disrat = false;
+            this.$vueEventBus.$emit("sort-disrat", this.filter);
+        },
+        sortDisrat() {
+            this.sort.pop = false;
+            this.sort.distance = false;
+            this.sort.rating = false;
+            this.sort.disrat = true;
+        }
     },
 };
 </script>
