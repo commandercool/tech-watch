@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div style="margin-top: 20px">
         <b-row>
             <b-col id="footer">
 

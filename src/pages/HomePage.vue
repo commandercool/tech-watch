@@ -12,7 +12,7 @@
             </b-col>
         </b-row>
         <b-row style="text-align:center; margin-top: 4rem">
-            <b-col sm>
+            <b-col lg="12">
                 <h2 style="font-weight: bolder; text-align: center">Как это работает</h2>
             </b-col>
             <b-col sm style="margin-top: 2rem">
