@@ -16,6 +16,9 @@ const router = new VueRouter({
   linkActiveClass: 'nav-item active'
 })
 
+// event Bus
+Vue.prototype.$vueEventBus = new Vue()
+
 new Vue({
   render: h => h(App),
   router

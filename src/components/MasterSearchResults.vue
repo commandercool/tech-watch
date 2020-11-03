@@ -1,6 +1,6 @@
 <template>
     <b-col md="9" style="padding: 10px; margin-bottom: 48px">
-        <MasterCard :master="master" v-for="master in masterList" :key="master.name" />
+        <MasterCard :master="master" v-for="master in masterListFiltered" :key="master.name" />
     </b-col>
 </template>
 
@@ -19,40 +19,41 @@ export default {
                         "Переустанавливаю операционные системы, имею большой опыт с Windows и Linux.",
                 },
                 {
-                    name: "Чувак Чуваков",
-                    rating: "3.5",
+                    name: "Мастер Фломастер",
+                    rating: "5",
                     description:
                         "Переустанавливаю операционные системы, имею большой опыт с Windows и Linux.",
                 },
                 {
-                    name: "Чувак Чуваков",
-                    rating: "3.5",
+                    name: "Форест Гамп",
+                    rating: "2",
                     description:
                         "Переустанавливаю операционные системы, имею большой опыт с Windows и Linux.",
                 },
                 {
-                    name: "Чувак Чуваков",
-                    rating: "3.5",
+                    name: "Том Круз",
+                    rating: "4.5",
                     description:
                         "Переустанавливаю операционные системы, имею большой опыт с Windows и Linux.",
-                },
-                {
-                    name: "Чувак Чуваков",
-                    rating: "3.5",
-                    description:
-                        "Переустанавливаю операционные системы, имею большой опыт с Windows и Linux.",
-                },
-                {
-                    name: "Чувак Чуваков",
-                    rating: "3.5",
-                    description:
-                        "Переустанавливаю операционные системы, имею большой опыт с Windows и Linux.",
-                },
+                }
             ],
+            masterListFiltered: ""
         };
     },
     components: {
         MasterCard,
+    },
+    methods: {
+        search(filter) {
+            this.masterListFiltered = this.masterList.filter(master => master.rating >= filter.rating);
+        }
+    },
+    mounted() {
+        this.masterListFiltered = this.masterList;
+        this.$vueEventBus.$on("filter-updated", this.search);
+    },
+    beforeDestroy() {
+        this.$vueEventBus.$off("filter-updated");
     },
 };
 </script>

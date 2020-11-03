@@ -13,14 +13,15 @@
                             <b-form-input v-model="filter.range" type="range" min="1" max="15"></b-form-input>
                             <div class="mt-2">{{ filter.range }} км</div>
                         </b-form-group>
-                        <b-form-group label="Рейтинг выше или равен:">
+                        <b-form-group label="Рейтинг не ниже:">
                             <b-form-rating
                                 style="padding: 0"
-                                value="3"
+                                v-model="filter.rating"
                                 variant="warning"
                                 no-border="true"
                             ></b-form-rating>
                         </b-form-group>
+                        <b-button variant="info" @click="emitFilterUpdated">Применить</b-button>
                     </b-form>
                 </b-col>
             </b-row>
@@ -48,9 +49,17 @@ export default {
         return {
             filtersDisplayed: false,
             filter: {
-                range: "1",
+                range: "5",
+                rating: "3",
             },
         };
+    },
+    methods: {
+        emitFilterUpdated() {
+            console.log(this.filter.rating);
+            this.$vueEventBus.$emit("filter-updated", this.filter);
+            this.filtersDisplayed = false;
+        },
     },
 };
 </script>
