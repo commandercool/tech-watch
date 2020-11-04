@@ -25,4 +25,7 @@ export default {
 a:hover {
   text-decoration: none;
 }
+body {
+  background-color: var(--light);
+}
 </style>

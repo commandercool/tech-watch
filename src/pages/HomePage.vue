@@ -86,7 +86,7 @@ export default {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
-h3 {
+h3, h2 {
     color: var(--secondary);
 }
 p {
