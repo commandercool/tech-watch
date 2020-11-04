@@ -1,25 +1,91 @@
 <template>
-    <div class="master-card">
-        Отзывы (100500)
-        <div class="master-card negative-review">
-            <b-row>
-                <b-col lg>Чайник</b-col>
-                <b-col cols="3">
-                    <b-avatar style="width: 100%; height: auto" square variant="info"></b-avatar>
-                </b-col>
-                <b-col cols="9">
-                    <b-form-rating
-                        style="padding: 0"
-                        value="2"
-                        variant="warning"
-                        no-border="true"
-                        readonly
-                    ></b-form-rating>
-                    <p class="comment">Все починил, но не очень хорошо</p>
-                </b-col>
-            </b-row>
-        </div>
-    </div>
+    <b-row class="justify-content-md-center">
+        <b-col md="6" class="master-card">
+            Отзывы (100500)
+            <div class="master-card negative-review">
+                <b-row>
+                    <b-col lg>Чайник</b-col>
+                    <b-col cols="3">
+                        <b-avatar style="width: 100%; height: auto" square variant="info"></b-avatar>
+                    </b-col>
+                    <b-col cols="9">
+                        <b-form-rating
+                            style="padding: 0"
+                            value="2"
+                            variant="warning"
+                            no-border="true"
+                            readonly
+                        ></b-form-rating>
+                        <p class="comment">Все починил, но не очень хорошо</p>
+                    </b-col>
+                </b-row>
+                <b-row>
+                    <b-col lg>Чайник</b-col>
+                    <b-col cols="3">
+                        <b-avatar style="width: 100%; height: auto" square variant="info"></b-avatar>
+                    </b-col>
+                    <b-col cols="9">
+                        <b-form-rating
+                            style="padding: 0"
+                            value="2"
+                            variant="warning"
+                            no-border="true"
+                            readonly
+                        ></b-form-rating>
+                        <p class="comment">Все починил, но не очень хорошо</p>
+                    </b-col>
+                </b-row>
+                <b-row>
+                    <b-col lg>Чайник</b-col>
+                    <b-col cols="3">
+                        <b-avatar style="width: 100%; height: auto" square variant="info"></b-avatar>
+                    </b-col>
+                    <b-col cols="9">
+                        <b-form-rating
+                            style="padding: 0"
+                            value="2"
+                            variant="warning"
+                            no-border="true"
+                            readonly
+                        ></b-form-rating>
+                        <p class="comment">Все починил, но не очень хорошо</p>
+                    </b-col>
+                </b-row>
+                <b-row>
+                    <b-col lg>Чайник</b-col>
+                    <b-col cols="3">
+                        <b-avatar style="width: 100%; height: auto" square variant="info"></b-avatar>
+                    </b-col>
+                    <b-col cols="9">
+                        <b-form-rating
+                            style="padding: 0"
+                            value="2"
+                            variant="warning"
+                            no-border="true"
+                            readonly
+                        ></b-form-rating>
+                        <p class="comment">Все починил, но не очень хорошо</p>
+                    </b-col>
+                </b-row>
+                <b-row>
+                    <b-col lg>Чайник</b-col>
+                    <b-col cols="3">
+                        <b-avatar style="width: 100%; height: auto" square variant="info"></b-avatar>
+                    </b-col>
+                    <b-col cols="9">
+                        <b-form-rating
+                            style="padding: 0"
+                            value="2"
+                            variant="warning"
+                            no-border="true"
+                            readonly
+                        ></b-form-rating>
+                        <p class="comment">Все починил, но не очень хорошо</p>
+                    </b-col>
+                </b-row>
+            </div>
+        </b-col>
+    </b-row>
 </template>
 
 <style scoped>

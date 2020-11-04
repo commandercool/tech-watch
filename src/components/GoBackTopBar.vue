@@ -18,7 +18,6 @@
     padding-bottom: 8px;
 }
 p {
-    color: var(--info);
     font-size: 1.2rem;
     margin: 0;
 }

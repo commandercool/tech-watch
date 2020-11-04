@@ -2,7 +2,7 @@
     <b-col md="6" style="margin-bottom: 48px; margin-top: 10px">
         <b-row class="d-md-block d-none">
             <b-col>
-                <b-dropdown variant="outline-info">
+                <b-dropdown variant="info">
                     <template slot="button-content">
                         <b-icon-sort-down-alt></b-icon-sort-down-alt>Сортировать
                     </template>
@@ -11,7 +11,7 @@
                     <b-dropdown-item >По рейтингу</b-dropdown-item>
                     <b-dropdown-item >По расстоянию и рейтингу</b-dropdown-item>
                 </b-dropdown>
-                <b-button variant="outline-info" style="margin-left: 4px; ">
+                <b-button variant="info" style="margin-left: 4px; ">
                     <b-icon-geo-alt></b-icon-geo-alt>
                     Показать на карте
                 </b-button>

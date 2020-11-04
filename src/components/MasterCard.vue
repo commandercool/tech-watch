@@ -8,7 +8,7 @@
                         <b-form-rating
                             style="padding: 0"
                             :value="master.rating"
-                            variant="warning"
+                            variant="info"
                             no-border="true"
                             readonly
                         ></b-form-rating>
@@ -42,16 +42,6 @@ export default {
 .master-description {
     font-size: 0.9rem;
     color: var(--secondary);
-}
-.master-card {
-    margin-top: 10px;
-    border: 1px solid;
-    border-color: lightgrey;
-    border-radius: 6px 6px 6px 6px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding: 10px;
-    background-color: white;
 }
 .master-card:hover {
   box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.75);
