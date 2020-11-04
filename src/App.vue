@@ -17,3 +17,12 @@ export default {
   }
 }
 </script>
+
+<style>
+.b-rating .b-rating-star, .b-rating .b-rating-value {
+    padding: 0;
+}
+a:hover {
+  text-decoration: none;
+}
+</style>

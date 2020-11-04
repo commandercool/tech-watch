@@ -52,4 +52,7 @@ export default {
     padding-bottom: 10px;
     padding: 10px;
 }
+.master-card:hover {
+  box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.75);
+}
 </style>
