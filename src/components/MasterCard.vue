@@ -4,7 +4,7 @@
             <router-link to="/master">
                 <b-row>
                     <b-col sm md="4">
-                        <b-avatar style="width: 100%; height: auto" square variant="info"></b-avatar>
+                        <b-avatar style="width: 100%; height: auto" square variant="info" :src="master.avatar"></b-avatar>
                         <b-form-rating
                             style="padding: 0"
                             :value="master.rating"

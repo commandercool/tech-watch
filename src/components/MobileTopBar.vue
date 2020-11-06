@@ -1,6 +1,6 @@
 <template>
-    <b-col sm id="mobile-menu" class="d-sm-block d-md-none sticky-top">
-        <div v-if="filtersDisplayed" id="filters">
+        <b-col sm id="mobile-menu" class="d-sm-block d-md-none sticky-top">
+            <div v-if="filtersDisplayed" id="filters">
             <b-row>
                 <b-col lg style="padding: 10px; padding-right: 32px;">
                     <h2 style="cursor: pointer" @click="filtersDisplayed = false">
@@ -8,65 +8,54 @@
                     </h2>
                 </b-col>
                 <b-col lg>
-                    <b-form id="filter-form">
-                        <b-form-group label="Расстояние:">
-                            <b-form-input v-model="filter.range" type="range" min="1" max="15"></b-form-input>
-                            <div class="mt-2">{{ filter.range }} км</div>
-                        </b-form-group>
-                        <b-form-group label="Рейтинг не ниже:">
-                            <b-form-rating
-                                style="padding: 0"
-                                v-model="filter.rating"
-                                variant="warning"
-                                no-border="true"
-                            ></b-form-rating>
-                        </b-form-group>
-                        <b-button variant="info" @click="emitFilterUpdated">Применить</b-button>
-                    </b-form>
+                    <SearchFilterForm />
                 </b-col>
             </b-row>
         </div>
-        <b-dropdown variant="outline-info">
-            <template slot="button-content">
-                <b-icon-sort-down-alt></b-icon-sort-down-alt>Сортировать
-            </template>
-            <b-dropdown-item @click="sortPop()" :active="sort.pop">По популярности</b-dropdown-item>
-            <b-dropdown-item @click="sortDistance()" :active="sort.distance">По расстоянию</b-dropdown-item>
-            <b-dropdown-item @click="sortRating()" :active="sort.rating">По рейтингу</b-dropdown-item>
-            <b-dropdown-item @click="sortDisrat()" :active="sort.disrat">По расстоянию и рейтингу</b-dropdown-item>
-        </b-dropdown>
-        <b-button variant="outline-info" style="margin-left: 4px" @click="filtersDisplayed = true">
-            <b-icon-filter-circle></b-icon-filter-circle>
-        </b-button>
-        <b-button variant="outline-info" style="margin-left: 4px">
-            <b-icon-geo-alt></b-icon-geo-alt>
-        </b-button>
-    </b-col>
+            <b-dropdown variant="outline-info">
+                <template slot="button-content">
+                    <b-icon-sort-down-alt></b-icon-sort-down-alt>Сортировать
+                </template>
+                <b-dropdown-item @click="sortPop()" :active="sort.pop">По популярности</b-dropdown-item>
+                <b-dropdown-item @click="sortDistance()" :active="sort.distance">По расстоянию</b-dropdown-item>
+                <b-dropdown-item @click="sortRating()" :active="sort.rating">По рейтингу</b-dropdown-item>
+                <b-dropdown-item
+                    @click="sortDisrat()"
+                    :active="sort.disrat"
+                >По расстоянию и рейтингу</b-dropdown-item>
+            </b-dropdown>
+            <b-button
+                variant="outline-info"
+                style="margin-left: 4px"
+                @click="filtersDisplayed = true"
+            >
+                <b-icon-filter-circle></b-icon-filter-circle>
+            </b-button>
+            <b-button variant="outline-info" style="margin-left: 4px">
+                <b-icon-geo-alt></b-icon-geo-alt>
+            </b-button>
+        </b-col>
 </template>
 
 <script>
+import SearchFilterForm from './SearchFilterForm.vue'
+
 export default {
+    components: {
+        SearchFilterForm
+    },
     data: function () {
         return {
             filtersDisplayed: false,
-            filter: {
-                range: "5",
-                rating: "3",
-            },
             sort: {
                 pop: true,
                 distance: false,
                 rating: false,
-                disrat: false
-            }
+                disrat: false,
+            },
         };
     },
     methods: {
-        emitFilterUpdated() {
-            console.log(this.filter.rating);
-            this.$vueEventBus.$emit("filter-updated", this.filter);
-            this.filtersDisplayed = false;
-        },
         sortPop() {
             this.sort.pop = true;
             this.sort.distance = false;
@@ -93,8 +82,16 @@ export default {
             this.sort.distance = false;
             this.sort.rating = false;
             this.sort.disrat = true;
-        }
+        },
     },
+    mounted() {
+        this.$vueEventBus.$on("filter-updated", () => {
+            this.filtersDisplayed = false;
+        });
+    },
+    beforeDestroy() {
+        this.$vueEventBus.$off("filter-updated");
+    }
 };
 </script>
 
@@ -117,5 +114,15 @@ export default {
     background-color: white;
     padding: 16px;
     z-index: 9999;
+}
+
+#menu-container {
+    width: auto;
+}
+
+@media only screen and (max-width: 768px) {
+    #menu-container {
+        width: 100%;
+    }
 }
 </style>

@@ -31,24 +31,28 @@ export default {
             masterList: [
                 {
                     name: "Чувак Чуваков",
+                    avatar: "https://comp-neo.ru/images/3144877772.jpg",
                     rating: "3.5",
                     description:
                         "Переустанавливаю операционные системы, имею большой опыт с Windows и Linux.",
                 },
                 {
                     name: "Мастер Фломастер",
+                    avatar: "https://remo24.ru/images/categories/remont-computerov.jpg",
                     rating: "5",
                     description:
                         "Переустанавливаю операционные системы, имею большой опыт с Windows и Linux.",
                 },
                 {
                     name: "Форест Гамп",
+                    avatar: "https://comp-master.kiev.ua/wp-content/uploads/2018/08/6-1.jpg",
                     rating: "2",
                     description:
                         "Переустанавливаю операционные системы, имею большой опыт с Windows и Linux.",
                 },
                 {
                     name: "Том Круз",
+                    avatar: "https://71.img.avito.st/640x480/6257265071.jpg",
                     rating: "4.5",
                     description:
                         "Переустанавливаю операционные системы, имею большой опыт с Windows и Linux.",
@@ -73,7 +77,7 @@ export default {
     },
     beforeDestroy() {
         this.$vueEventBus.$off("filter-updated");
-    },
+    }
 };
 </script>
 
