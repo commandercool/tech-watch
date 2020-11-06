@@ -27,7 +27,10 @@ a:hover {
 }
 body {
   background-color: var(--light);
-  color: var(--secondary)
+  color: var(--secondary);
+}
+html, body {
+  min-height: 100%;
 }
 .master-card {
     margin-top: 10px;

@@ -1,5 +1,5 @@
 <template>
-    <b-col md="6" style="margin-bottom: 48px; margin-top: 10px">
+    <b-col md="6" style="min-height: 100vh; margin-top: 10px">
         <b-row class="d-md-block d-none">
             <b-col>
                 <b-dropdown variant="info">
