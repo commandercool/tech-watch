@@ -1,18 +1,17 @@
 <template>
-    <div class="d-md-block d-none navigation">
-        <b-row>
-            <b-col id="footer">
-
-            </b-col>
-        </b-row>
-    </div>
+    <b-row class="d-md-block d-none footer">
+        <b-col lg style="text-align: center">
+            <p>(c) Все права защищены (как их защитить?)</p>
+        </b-col>
+    </b-row>
 </template>
 
 <style scoped>
-#footer {
+.footer {
     background-color: var(--secondary);
-    height: 48px;
-    width: 100%;
-    margin-top: 20px;
+}
+p {
+    margin: 0;
+    color: whitesmoke;
 }
 </style>

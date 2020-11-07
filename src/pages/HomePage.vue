@@ -11,7 +11,7 @@
                 </div>
             </b-col>
         </b-row>
-        <b-row style="text-align:center; margin-top: 4rem">
+        <b-row style="text-align:center; margin-top: 4rem; margin-bottom: 6rem">
             <b-col lg="12">
                 <h2 style="font-weight: bolder; text-align: center">Как это работает</h2>
             </b-col>
@@ -37,18 +37,55 @@
                 <p>Получайте качественный ремонт вашей техники по низкой цене</p>
             </b-col>
         </b-row>
+        <b-row>
+            <b-col lg class="main-home become-master" style="height: 20rem">
+                <div class="slogan">Зарегистрироваться как мастер</div>
+                <div style="margin-top: 2rem">
+                    <p
+                        class="slogan-description"
+                    >Разбираетесь в компьютерах? Умеете переустанавливать Windows?</p>
+                    <p class="slogan-description">Регистрируйтесь на сайте и помогайте соседям!</p>
+                </div>
+                <router-link to="/register">
+                    <b-button variant="info" class="search-button">Я - мастер</b-button>
+                </router-link>
+            </b-col>
+        </b-row>
+        <b-row style="text-align:center; margin-top: 4rem; margin-bottom: 6rem">
+            <b-col sm style="margin-top: 2rem">
+                <h1>
+                    <b-icon-person class="rounded-circle bg-info p-2" variant="light"></b-icon-person>
+                </h1>
+                <h3>Регистрируйтесь</h3>
+                <p>Быстрая регистрация по номеру телефона</p>
+            </b-col>
+            <b-col sm style="margin-top: 2rem">
+                <h1>
+                    <b-icon-list-check class="rounded-circle bg-info p-2" variant="light"></b-icon-list-check>
+                </h1>
+                <h3>Заполняйте анкету</h3>
+                <p>Опишите свои навыки и то, какую помощь вы готовы оказать</p>
+            </b-col>
+            <b-col sm style="margin-top: 2rem">
+                <h1>
+                    <b-icon-tools class="rounded-circle bg-info p-2" variant="light"></b-icon-tools>
+                </h1>
+                <h3>Чините!</h3>
+                <p>Помогайте соседям и получайте от них оплату напрямую без посредников и комиссий</p>
+            </b-col>
+        </b-row>
         <Footer />
     </div>
 </template>
 
 <script>
 import Header from "../components/Header.vue";
-import Footer from '../components/Footer.vue'
+import Footer from "../components/Footer.vue";
 
 export default {
     components: {
         Header,
-        Footer
+        Footer,
     },
 };
 </script>
@@ -64,16 +101,28 @@ export default {
     font-size: 2.7rem;
     font-weight: 700;
     padding-top: 4rem;
+    position: relative;
 }
 .slogan {
     color: white;
     font-size: 1.6rem;
     line-height: 1.6rem;
-    font-weight: bolder;
+    font-weight: bold;
+}
+.slogan-description {
+    color: white;
+    font-size: 1rem;
+    line-height: 0.8rem;
+    font-weight: normal;
 }
 .landing {
-    position: relative;
     background-image: url("~@/assets/laptop-dimmed.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.become-master {
+    background-image: url("~@/assets/become-master-dimmed.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -86,7 +135,8 @@ export default {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
-h3, h2 {
+h3,
+h2 {
     color: var(--secondary);
 }
 p {
