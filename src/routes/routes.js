@@ -1,6 +1,7 @@
 import SearchMasterPage from '../pages/SearchMasterPage.vue'
 import MasterCardPage from '../pages/MasterCardPage.vue'
 import HomePage from '../pages/HomePage.vue'
+import MasterRegister from '../pages/MasterRegister.vue'
 
 const routes = [{
     path: '/',
@@ -16,6 +17,11 @@ const routes = [{
     path: '/master',
     name: 'Master',
     component: MasterCardPage
+  },
+  {
+    path: '/register',
+    name: 'Register',
+    component: MasterRegister
   }
 ]
 
