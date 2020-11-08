@@ -38,7 +38,7 @@
             </b-col>
         </b-row>
         <b-row>
-            <b-col lg class="main-home become-master" style="height: 20rem">
+            <b-col id="master" lg class="main-home become-master" style="height: 20rem">
                 <div class="slogan">Зарегистрироваться как мастер</div>
                 <div style="margin-top: 2rem">
                     <p
