@@ -7,9 +7,6 @@
                 <h2>Регистрация</h2>
                 <div class="master-card" style="padding: 20px">
                     <b-form style="master-card">
-                        <b-form-group label="Адрес электронной почты:">
-                            <b-form-input placeholder="Электронная почта"></b-form-input>
-                        </b-form-group>
                         <b-form-group label="Имя:">
                             <b-form-input placeholder="Имя"></b-form-input>
                         </b-form-group>
@@ -39,7 +36,12 @@
                                 placeholder="Подробная информация с выполняемыми услугами и прайсами"
                             ></b-form-textarea>
                         </b-form-group>
-                        <b-button>Зарегистрироваться</b-button>
+                        <b-form-group>
+                            <b-link>Согласие на обработку персональных данных</b-link>
+                        </b-form-group>
+                        <b-form-group>
+                            <b-button>Зарегистрироваться</b-button>
+                        </b-form-group>
                     </b-form>
                 </div>
             </b-col>
