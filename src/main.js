@@ -5,7 +5,9 @@ import './plugins/bootstrap-vue'
 import App from './App.vue'
 import VueRouter from 'vue-router'
 import routes from './routes/routes'
-
+import LoadScript from 'vue-plugin-load-script';
+ 
+Vue.use(LoadScript);
 Vue.use(VueRouter)
 Vue.config.productionTip = false
 
