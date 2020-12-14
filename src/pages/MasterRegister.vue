@@ -13,14 +13,20 @@
                         <b-form-group label="Фамилия:">
                             <b-form-input placeholder="Фамилия"></b-form-input>
                         </b-form-group>
+                        <b-form-group label="Телефон:">
+                            <b-form-input placeholder="89870000000" type="number"></b-form-input>
+                        </b-form-group>
                         <b-form-group label="Возраст">
                             <b-form-input type="number"></b-form-input>
                         </b-form-group>
                         <b-form-group label="Адрес:">
-                            <b-form-input placeholder="Адрес"></b-form-input>
+                            <MapTest />
                         </b-form-group>
                         <b-form-group label="Образование:">
                             <b-form-input placeholder="Образование"></b-form-input>
+                        </b-form-group>
+                        <b-form-group label="Личный сайт:">
+                            <b-form-input placeholder="https://mysite"></b-form-input>
                         </b-form-group>
                         <b-form-group
                             label="Краткая информация:"
@@ -52,12 +58,14 @@
 
 <script>
 import Header from '../components/Header.vue';
+import MapTest from './MapTest.vue'
 import Footer from '../components/Footer.vue'
 
 export default {
     components: {
         Header,
-        Footer
+        Footer,
+        MapTest
     },
 };
 </script>

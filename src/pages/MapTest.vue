@@ -1,9 +1,27 @@
 <template>
     <div>
         <autocomplete :search="search"
-        placeholder="Введите адрес"></autocomplete>
+        placeholder="Введите адрес" auto-select></autocomplete>
     </div>
 </template>
+
+<style>
+.autocomplete-input {
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    width: 100%;
+    padding: 8px 12px 12px 48px;
+    padding-bottom: 12px;
+    box-sizing: border-box;
+    position: relative;
+    font-size: 16px;
+    line-height: 1.5;
+    flex: 1;
+    background-color: white;
+    background-repeat: no-repeat;
+    height: calc(1.5em + .75rem + 2px);
+}
+</style>
 
 <script>
 import Autocomplete from "@trevoreyre/autocomplete-vue";
