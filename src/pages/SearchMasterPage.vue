@@ -6,7 +6,7 @@
             <MobileTopBar />
             <MasterSearchResults />
         </b-row>
-        <MobileBottomBar />
+        <!-- <MobileBottomBar /> -->
         <Footer />
     </div>
 </template>
@@ -14,7 +14,7 @@
 <script>
 import MobileTopBar from '../components/MobileTopBar.vue';
 import MasterSearchResults from '../components/MasterSearchResults.vue';
-import MobileBottomBar from '../components/MobileBottomBar.vue';
+// import MobileBottomBar from '../components/MobileBottomBar.vue';
 import Header from '../components/Header.vue';
 import DesktopNavigation from '../components/DesktopNavigation.vue';
 import Footer from '../components/Footer.vue'
@@ -23,7 +23,7 @@ export default {
     components: {
         MobileTopBar,
         MasterSearchResults,
-        MobileBottomBar,
+        // MobileBottomBar,
         Header,
         DesktopNavigation,
         Footer

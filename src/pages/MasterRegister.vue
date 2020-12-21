@@ -7,6 +7,10 @@
                 <h2>Регистрация</h2>
                 <div class="master-card" style="padding: 20px">
                     <b-form style="master-card">
+                        <b-form-group label="Аватар:">
+                            <b-avatar square style="width: 100%; height: auto; margin-bottom: 4px"></b-avatar>
+                            <b-form-file placeholder="Выберите фотографию для аватара"></b-form-file>
+                        </b-form-group>
                         <b-form-group label="Имя:">
                             <b-form-input placeholder="Имя"></b-form-input>
                         </b-form-group>
@@ -20,11 +24,7 @@
                             <b-form-input type="number"></b-form-input>
                         </b-form-group>
                         <b-form-group label="Адрес:">
-                            <autocomplete
-                                :search="search"
-                                placeholder="Введите адрес"
-                                auto-select
-                            ></autocomplete>
+                            <autocomplete :search="search" placeholder="Введите адрес" auto-select></autocomplete>
                         </b-form-group>
                         <b-form-group label="Образование:">
                             <b-form-input placeholder="Образование"></b-form-input>
@@ -88,13 +88,13 @@ export default {
     components: {
         Header,
         Footer,
-        Autocomplete
+        Autocomplete,
     },
     data: function () {
         return {
             ymaps: null,
             searchVal: "",
-            res: []
+            res: [],
         };
     },
     methods: {
