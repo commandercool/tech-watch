@@ -2,8 +2,17 @@
     <div>
         <Header />
         <b-row>
-            <b-col lg class="landing main-home">
+            <b-col lg class="landing main-home" style="height: 20rem">
                 <div class="slogan">Компьютерный мастер по соседству</div>
+                <div style="margin-top: 2rem">
+                    <p class="slogan-description">
+                        Проблемы с комьютером, телефоном или планшетом?
+                    </p>
+                    <p class="slogan-description">
+                        Найдите мастера по рядом с вами и пригласите его, чтобы
+                        он починил вашу технику!
+                    </p>
+                </div>
                 <div>
                     <router-link to="/search">
                         <b-button variant="danger" class="search-button">Найти!</b-button>
@@ -41,8 +50,7 @@
             <b-col id="master" lg class="main-home become-master" style="height: 20rem">
                 <div class="slogan">Зарегистрироваться как мастер</div>
                 <div style="margin-top: 2rem">
-                    <p
-                        class="slogan-description"
+                    <p class="slogan-description"
                     >Разбираетесь в компьютерах? Умеете переустанавливать Windows?</p>
                     <p class="slogan-description">Регистрируйтесь на сайте и помогайте соседям!</p>
                 </div>

@@ -11,10 +11,10 @@
                     <b-dropdown-item >По рейтингу</b-dropdown-item>
                     <b-dropdown-item >По расстоянию и рейтингу</b-dropdown-item>
                 </b-dropdown>
-                <b-button variant="info" style="margin-left: 4px; ">
+                <!-- <b-button variant="info" style="margin-left: 4px; ">
                     <b-icon-geo-alt></b-icon-geo-alt>
                     Показать на карте
-                </b-button>
+                </b-button> -->
             </b-col>
         </b-row>
         <MasterCard :master="master" v-for="master in masterListFiltered" :key="master.name" />

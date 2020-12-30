@@ -1,12 +1,15 @@
 <template>
     <b-row class="top-bar" variant="info">
-        <router-link to="/">
-            <b-col>
-                <span style="font-size: 2.5rem">
+        <b-col>
+            <router-link to="/">
+                <div style="font-size: 2.5rem; float: left">
                     <b-icon-laptop class="rounded-circle bg-light p-2" variant="info"></b-icon-laptop>
-                </span>
-            </b-col>
-        </router-link>
+                </div>
+                <div style="float: left; color: white; line-height: 4rem; font-size: 1.4rem; margin-left: .2rem;">
+                    Мастерская
+                </div>
+            </router-link>
+        </b-col>
     </b-row>
 </template>
 

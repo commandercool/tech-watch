@@ -24,16 +24,6 @@
                     :active="sort.disrat"
                 >По расстоянию и рейтингу</b-dropdown-item>
             </b-dropdown>
-            <b-button
-                variant="outline-info"
-                style="margin-left: 4px"
-                @click="filtersDisplayed = true"
-            >
-                <b-icon-filter-circle></b-icon-filter-circle>
-            </b-button>
-            <b-button variant="outline-info" style="margin-left: 4px">
-                <b-icon-geo-alt></b-icon-geo-alt>
-            </b-button>
         </b-col>
 </template>
 
