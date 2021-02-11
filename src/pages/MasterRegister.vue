@@ -8,41 +8,41 @@
                 <div class="master-card" style="padding: 20px">
                     <b-form style="master-card">
                         <b-form-group label="Аватар:">
-                            <b-avatar square style="width: 100%; height: auto; margin-bottom: 4px"></b-avatar>
-                            <b-form-file placeholder="Выберите фотографию для аватара"></b-form-file>
+                            <b-avatar :src="this.url" square style="width: 100%; height: auto; margin-bottom: 4px"></b-avatar>
+                            <b-form-file @change="avatarSelected" placeholder="Выберите фотографию для аватара"></b-form-file>
                         </b-form-group>
                         <b-form-group label="Имя:">
-                            <b-form-input placeholder="Имя"></b-form-input>
+                            <b-form-input v-model="reg.name" placeholder="Имя"></b-form-input>
                         </b-form-group>
                         <b-form-group label="Фамилия:">
-                            <b-form-input placeholder="Фамилия"></b-form-input>
+                            <b-form-input v-model="reg.secondname" placeholder="Фамилия"></b-form-input>
                         </b-form-group>
                         <b-form-group label="Телефон:">
-                            <b-form-input placeholder="89870000000" type="number"></b-form-input>
+                            <b-form-input v-model="reg.phone" placeholder="89870000000" type="number"></b-form-input>
                         </b-form-group>
                         <b-form-group label="Возраст">
-                            <b-form-input type="number"></b-form-input>
+                            <b-form-input v-model="reg.age" type="number"></b-form-input>
                         </b-form-group>
                         <b-form-group label="Адрес:">
-                            <autocomplete :search="search" placeholder="Введите адрес" auto-select></autocomplete>
+                            <autocomplete @submit="searchSubmit" :search="search" placeholder="Введите адрес" auto-select></autocomplete>
                         </b-form-group>
                         <b-form-group label="Образование:">
-                            <b-form-input placeholder="Образование"></b-form-input>
+                            <b-form-input v-model="reg.education" placeholder="Образование"></b-form-input>
                         </b-form-group>
                         <b-form-group label="Личный сайт:">
-                            <b-form-input placeholder="https://mysite"></b-form-input>
+                            <b-form-input v-model="reg.personalWebPage" placeholder="https://mysite"></b-form-input>
                         </b-form-group>
                         <b-form-group
                             label="Краткая информация:"
                             description="Краткая информация отображается в карточке в результатах поиска"
                         >
-                            <b-form-input placeholder="Краткая информация, не более 140 символов"></b-form-input>
+                            <b-form-input v-model="reg.summary" placeholder="Краткая информация, не более 140 символов"></b-form-input>
                         </b-form-group>
                         <b-form-group
                             label="Подробная информация:"
                             description="Подробная информация отображается в карточке мастера"
                         >
-                            <b-form-textarea
+                            <b-form-textarea v-model="reg.description"
                                 placeholder="Подробная информация с выполняемыми услугами и прайсами"
                             ></b-form-textarea>
                         </b-form-group>
@@ -50,7 +50,7 @@
                             <b-link>Согласие на обработку персональных данных</b-link>
                         </b-form-group>
                         <b-form-group>
-                            <b-button>Зарегистрироваться</b-button>
+                            <b-button @click="register">Зарегистрироваться</b-button>
                         </b-form-group>
                     </b-form>
                 </div>
@@ -92,12 +92,18 @@ export default {
     },
     data: function () {
         return {
+            url: null,
             ymaps: null,
             searchVal: "",
             res: [],
+            reg: {}
         };
     },
     methods: {
+        avatarSelected(e) {
+            const file = e.target.files[0];
+            this.url = URL.createObjectURL(file);
+        },
         search(input) {
             if (input.length < 3) {
                 return [];
@@ -113,6 +119,12 @@ export default {
                     );
                 });
         },
+        searchSubmit(result) {
+            this.reg.address=result;
+        },
+        register() {
+            console.log(this.reg);
+        }
     },
     created() {
         this.$loadScript(
