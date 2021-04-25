@@ -6,51 +6,98 @@
             <b-col lg="6">
                 <h2>Регистрация</h2>
                 <div class="master-card" style="padding: 20px">
-                    <b-form style="master-card">
+                    <b-form style="master-card" @submit="register">
                         <b-form-group label="Аватар:">
-                            <b-avatar :src="this.url" square style="width: 100%; height: auto; margin-bottom: 4px"></b-avatar>
-                            <b-form-file @change="avatarSelected" placeholder="Выберите фотографию для аватара"></b-form-file>
+                            <b-avatar
+                                :src="this.url"
+                                square
+                                style="width: 100%; height: auto; margin-bottom: 4px"
+                            ></b-avatar>
+                            <b-form-file
+                                @change="avatarSelected"
+                                placeholder="Выберите фотографию для аватара"
+                            ></b-form-file>
                         </b-form-group>
                         <b-form-group label="Имя:">
-                            <b-form-input v-model="reg.name" placeholder="Имя"></b-form-input>
+                            <b-form-input
+                                v-model="reg.name"
+                                placeholder="Имя"
+                                required
+                                oninvalid="this.setCustomValidity('Пожалуйста, укажите свое имя')"
+                                oninput="setCustomValidity('')"
+                            ></b-form-input>
                         </b-form-group>
                         <b-form-group label="Фамилия:">
-                            <b-form-input v-model="reg.secondname" placeholder="Фамилия"></b-form-input>
+                            <b-form-input
+                                v-model="reg.secondname"
+                                placeholder="Фамилия"
+                                required
+                                oninvalid="this.setCustomValidity('Пожалуйста, укажите свою фамилию')"
+                                oninput="setCustomValidity('')"
+                            ></b-form-input>
                         </b-form-group>
                         <b-form-group label="Телефон:">
-                            <b-form-input v-model="reg.phone" placeholder="89870000000" type="number"></b-form-input>
+                            <b-form-input
+                                v-model="reg.phone"
+                                placeholder="89870000000"
+                                type="number"
+                                required
+                                oninvalid="this.setCustomValidity('Пожалуйста, укажите свой телефон')"
+                                oninput="setCustomValidity('')"
+                            ></b-form-input>
                         </b-form-group>
                         <b-form-group label="Возраст">
                             <b-form-input v-model="reg.age" type="number"></b-form-input>
                         </b-form-group>
                         <b-form-group label="Адрес:">
-                            <autocomplete @submit="searchSubmit" :search="search" placeholder="Введите адрес" auto-select></autocomplete>
+                            <autocomplete
+                                required
+                                @submit="searchSubmit"
+                                :search="search"
+                                placeholder="Введите адрес"
+                                auto-select
+                                oninvalid="this.setCustomValidity('Пожалуйста, укажите свой адрес')"
+                                oninput="setCustomValidity('')"
+                            ></autocomplete>
                         </b-form-group>
                         <b-form-group label="Образование:">
                             <b-form-input v-model="reg.education" placeholder="Образование"></b-form-input>
                         </b-form-group>
                         <b-form-group label="Личный сайт:">
-                            <b-form-input v-model="reg.personalWebPage" placeholder="https://mysite"></b-form-input>
+                            <b-form-input
+                                v-model="reg.personalWebPage"
+                                placeholder="https://mysite"
+                            ></b-form-input>
                         </b-form-group>
                         <b-form-group
                             label="Краткая информация:"
                             description="Краткая информация отображается в карточке в результатах поиска"
                         >
-                            <b-form-input v-model="reg.summary" placeholder="Краткая информация, не более 140 символов"></b-form-input>
+                            <b-form-input
+                                v-model="reg.summary"
+                                placeholder="Краткая информация, не более 140 символов"
+                                required
+                                oninvalid="this.setCustomValidity('Пожалуйста, заполните краткую информацию о себе')"
+                                oninput="setCustomValidity('')"
+                            ></b-form-input>
                         </b-form-group>
                         <b-form-group
                             label="Подробная информация:"
                             description="Подробная информация отображается в карточке мастера"
                         >
-                            <b-form-textarea v-model="reg.description"
+                            <b-form-textarea
+                                v-model="reg.description"
                                 placeholder="Подробная информация с выполняемыми услугами и прайсами"
+                                required
+                                oninvalid="this.setCustomValidity('Пожалуйста, опишите подробно услуги, которые вы оказываете')"
+                                oninput="setCustomValidity('')"
                             ></b-form-textarea>
                         </b-form-group>
                         <b-form-group>
                             <b-link>Согласие на обработку персональных данных</b-link>
                         </b-form-group>
                         <b-form-group>
-                            <b-button @click="register">Зарегистрироваться</b-button>
+                            <b-button type="submit">Зарегистрироваться</b-button>
                         </b-form-group>
                     </b-form>
                 </div>
@@ -96,7 +143,7 @@ export default {
             ymaps: null,
             searchVal: "",
             res: [],
-            reg: {}
+            reg: {},
         };
     },
     methods: {
@@ -120,11 +167,12 @@ export default {
                 });
         },
         searchSubmit(result) {
-            this.reg.address=result;
+            this.reg.address = result;
         },
-        register() {
-            console.log(this.reg);
-        }
+        register(event) {
+            event.preventDefault();
+            console.log(event);
+        },
     },
     created() {
         this.$loadScript(
